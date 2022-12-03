@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  {% load static %}
+  <title>Basketball</title>
+  <link rel="stylesheet" href="{% static 'MiApp/style.css' %}" type="text/css" charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+<div id="wrapper">
+  <div id="man">
+    <h1><img src="{% static 'MiApp/images/logo.gif' %}" width="778" height="80" alt="BIENVENIDOS AL BLOG DE BASKETBALL"></h1>
+    
+    <div id="body">
+      <div class="drk" id="welcome">
+        <div class="top">
+          <div class="bot">
+            <div class="picbar"><img src="{% static 'MiApp/images/pic_2.jpg' %}" width="458" height="200" alt="Pic 2"></div>
+            <div class="pad">
+              <h2><img src="{% static 'MiApp/images/h_welcome_to_our_club.gif' %}" width="137" height="17" alt="Welcome To Our Club" /></h2>
+              <p>
+
+                El mejor noticiero de basket del mundo!.
+              {% if request.user.is_authenticated %}
+                <img src="{{url}}" alt="">
+                <h1 class="mb-5">Hola {{user.username}}</h1>
+              {%else%}
+                <h1 class="mb-5">Hola invitado</h1>
+              {%endif%}
+              </p>
+              <div class="button">
+                <button type="button" class="btn btn-primary"><a href="{% url 'Inicio' %}" class="diamond">Home</a></p>
+                <button type="button" class="btn btn-primary"><a href="{% url 'pages' %}" class="diamond">Paginas blog</a></p>
+                <button type="button" class="btn btn-primary"><a href="{% url 'jugadores' %}" class="diamond">Jugadores</a></p>
+                <button type="button" class="btn btn-primary"><a href="{% url 'entrenadores' %}" class="diamond">Entrenadores</a></p>
+                <button type="button" class="btn btn-primary"><a href="{% url 'torneos' %}" class="diamond">Torneos</a></p>
+                <button type="button" class="btn btn-primary"><a href="{% url 'FormularioJugadores' %}" class="diamond">Crear Jugadores</a></p>
+                <button type="button" class="btn btn-primary"><a href="{% url 'FormularioEntrenadores' %}" class="diamond">Crear Entrenadores</a></p>
+                <button type="button" class="btn btn-primary"><a href="{% url 'FormularioTorneos' %}" class="diamond">Crear Torneos</a></p>
+                <button type="button" class="btn btn-primary"><a href="{% url 'BuscarJugador' %}" class="diamond">Buscar Jugador</a></p>
+                <button type="button" class="btn btn-primary"><a href="{% url 'List' %}" class="diamond">Jugadores - Vista basades en clases</a></p>
+                <button type="button" class="btn btn-primary"><a href="{% url 'Sign Up' %}" class="diamond">Registrarse</a></p>
+                <button type="button" class="btn btn-primary"><a href="{% url 'FormularioBlogs' %}" class="diamond">Hacer publicacion</a></p>
+                <button type="button" class="btn btn-primary"><a href="{% url 'NuevosBlogs' %}" class="diamond">Nuevas publicaciones</a></p>
+                {% if request.user.is_authenticated %}
+                  <button type="button" class="btn btn-primary"><a href="{% url 'Logout' %}" class="diamond">Log out</a></p>
+                {%else%}
+                  <button type="button" class="btn btn-primary"><a href="{% url 'Login' %}" class="diamond">Iniciar sesion</a></p>
+                {%endif%}
+                {% if request.user.is_authenticated %}
+                  <button type="button" class="btn btn-primary"><a href="{% url 'Editar usuario' %}" class="diamond">Editar usuario</a></p>
+                {%endif%}
+                <button type="button" class="btn btn-primary"><a href="{% url 'AboutMe' %}" class="diamond">Sobre mi</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="body">
+          {% block contenidoquecambia %}
+          {% endblock %}
+        </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+
+</body>
+</html>

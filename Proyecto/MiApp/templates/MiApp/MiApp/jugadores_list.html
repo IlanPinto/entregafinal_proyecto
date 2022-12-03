@@ -1,0 +1,38 @@
+{% extends 'MiApp/index2.html' %}
+
+{% load static %}
+
+{% block contenidoquecambia %}
+
+
+
+    <h1> Jugadores</h1>
+    <h2> Listado actualizado</h2>
+
+
+    {% for jugador in object_list %}
+
+        <ul>
+            <li>
+                {{jugador}}
+
+                <button>
+                    <a href="{% url 'Detail' jugador.id %}"> Ver Detalle</a>
+                </button>
+                <button>
+                    <a href="{% url 'Delete' jugador.id %}"> Eliminar</a>
+                </button>
+                <button>
+                    <a href="{% url 'Update' jugador.id %}"> Actualizar</a>
+                </button>
+
+
+            </li>
+        </ul>
+    {% endfor %}
+
+    <button>
+        <a href="{% url 'Create' %}"> Crear jugador</a>
+    </button>
+    <p class="more"><a href="{% url 'Nomoreinfo' %}" class="diamond">Leer mas</a></p>
+{% endblock %}

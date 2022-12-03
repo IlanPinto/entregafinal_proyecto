@@ -1,0 +1,15 @@
+{% extends 'MiApp/index2.html' %}
+
+{% load static %}
+
+{% block contenidoquecambia %}
+    <img src="{{'media/images/Ilan.jpg'}}" width="250" height="250" alt=".">
+    <h1>Acerca de mi</h1>
+    <h2>Hola! Bienvenidos a mi blog</h2>
+    <h3>Mi nombre es Ilan Pinto, soy Argentino y tengo 28 años </h3>
+    <h3>Soy ingeniero quimico y trabajo hace 5 años en el rubro de la energia. Me interese por el curso ya que suelo hacer simulaciones en Excel, pero tenia ganas de ampliar mis horizontes y adquirir herramientas nuevas.</h3>
+    <h3>Decidi hacer mi blog sobre Basket ya que lo practico desde chico y me apasiona. Espero les guste!</h3>
+    <h3> Autor: Ilan Pinto</h3>
+    <h3> Fecha: 27/11/2022</h3>
+    <p class="more"><a href="{% url 'Nomoreinfo' %}" class="diamond">Leer mas</a></p>
+{% endblock %}

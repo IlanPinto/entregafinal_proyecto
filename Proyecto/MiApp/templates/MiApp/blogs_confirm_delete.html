@@ -1,0 +1,10 @@
+{% extends 'MiApp/index2.html' %}
+
+{% load static %}
+
+{% block contenidoquecambia %}
+    <form method="post"> {% csrf_token %}
+        Estas seguro que deseas eliminar la publicacion?
+        <input type="submit" value="Submit" />
+    </form>
+{% endblock %}

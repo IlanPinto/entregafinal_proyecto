@@ -1,0 +1,28 @@
+{% extends 'MiApp/index2.html' %}
+
+{% load static %}
+
+{% block contenidoquecambia %}
+    <h1>Explicacion de paginas en el blog</h1>
+    <h2>Lea debajo para encontrar informacion acerca de cada una de las paginas</h2>
+    <h3>-Home: permite volver al inicio del blog.</h3>
+    <h3>-Jugadores: muestra los jugadores que se encuentran actualmente cargados en la base de datos (mediante vista basada en funciones)</h3>
+    <h3>-Entrenadores: muestra los entrenadores que se encuentran actualmente cargados en la base de datos (mediante vista basada en funciones)</h3>
+    <h3>-Torneos: muestra los torneos que se encuentran actualmente cargados en la base de datos (mediante vista basada en funciones)</h3>
+    <h3>-Crear jugadores: permite agregar nuevos jugadores a la base de datos. Debe estar logeado para realizar la operacion.</h3>
+    <h3>-Crear entrenadore: permite agregar nuevos entrenadores a la base de datos. Debe estar logeado para realizar la operacion.</h3>
+    <h3>-Crear torneos: permite agregar nuevos torneos a la base de datos. Debe estar logeado para realizar la operacion.</h3>
+    <h3>-Buscar jugador: permite buscar si un jugador se encuentra o no en la base de datos</h3>
+    <h3>-Jugadores - Vistas basadas en clases: muestra los jugadores que se encuentran actualmente cargados en la base de datos. Permite tambien eliminar, ver detalle, actualizar y crear los mismos (mediante vista basada en clases), siempre y cuando uno se encuentre logeado. Se muestra esta alternativa en Jugaores para mostrar entendimiento de vistas basadas en clases.</h3>
+    <h3>-Registrarse: permite registrar un nuevo usuario</h3>
+    <h3>-Logout: en case de haberse logeado, permite cerrar sesion (solo aparece si el usuario ya inicio sesion)</h3>
+    <h3>-Iniciar sesion: en case de no haberse logeado, permite iniicar sesion (solo aparece si el usuario no inicio sesion aun)</h3>
+    <h3>-Editar usuario: en case de haberse logeado, permite editar los datos del usuario (solo aparece si el usuario ya inicio sesion)</h3>
+    <h3>-Hacer publicacion: permite crear un nuevo posteo, incluyendo una imagen. La fecha es tomada automaticamente, sin necesidad de introducirla. Debe estar logeado para realizar la operacion. </h3>
+    <h3>-Nuevas publicaciones: permite ver todos los posteos creados. Adicionalmente, se pueden actulizar y/o eliminar los posteos, siempre y cuando el usuario sea un super usuario.</h3>
+    <h3>-Sobre mi: breve descripcion acerca del autor de la pagina.</h3>
+    <h3>Comentarios generales:</h3> 
+    <h3>-Todas las paginas cuentas con titulo, subtitulo e imagenes</h3>
+    <h3>-Las paginas jugadores, entrenadores y torneos cuentan con autor, fecha y boton "Leer mas" (no hacia sentido ponerlo en las demas)</h3>    
+
+{% endblock %}

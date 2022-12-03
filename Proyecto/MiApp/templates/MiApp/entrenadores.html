@@ -1,0 +1,17 @@
+{% extends 'MiApp/index2.html' %}
+
+{% load static %}
+
+{% block contenidoquecambia %}
+    <h1> Entrenadores</h1>
+    <h2> Listado actualizado</h2>
+    <p> Los entrenadores de la semana son:</p>
+    {% for entrenador in entrenadores %}
+    
+        <p>El entrenador {{entrenador.nombre}} {{entrenador.apellido}}, entrena a {{entrenador.entrenado}} y su mail es {{entrenador.email}}   </p>
+    
+    {% endfor %}
+    <h3> Autor: Ilan Pinto</h3>
+    <h3> Fecha: 27/11/2022</h3>
+    <p class="more"><a href="{% url 'Nomoreinfo' %}" class="diamond">Leer mas</a></p>
+{% endblock %}

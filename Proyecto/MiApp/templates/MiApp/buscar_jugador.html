@@ -1,0 +1,47 @@
+{% extends 'MiApp/index2.html' %}
+
+{% load static %}
+
+{% block contenidoquecambia %}
+    <h1> Busque jugador</h1>
+    <h2> Busque segun actualizaciones</h2>
+    <form action="" method="get">
+
+        <input type="text" name="apellido" id="apellido" placeholder="buscar por apellido...">
+
+        <input type="submit" value="Buscar">
+
+    </form>
+
+    {% if jugadores %}
+
+        <ul>
+        {% for player in jugadores%}
+            <li>El jugador {{player.nombre}} {{player.apellido}} se encuentra en la base </li>
+        {% endfor%}
+        <ul>
+    {%else%}
+            <p>No hay datos</p>
+    {%endif%}
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
